@@ -24,18 +24,10 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage> {
   final String appBarTitle = 'Solid software test task';
+  final String middleText = 'Hey there';
   double textSize = 20;
   TextEditingController controller = TextEditingController();
   Color bgColor = Colors.white;
-  String _middleText = 'Hey there';
-
-  String get middleText => _middleText;
-
-  set middleText(String newMiddleText) {
-    if (newMiddleText != null && newMiddleText.trim().isNotEmpty) {
-      _middleText = newMiddleText;
-    }
-  }
 
   _MainPageState() {
     controller.text = middleText;
