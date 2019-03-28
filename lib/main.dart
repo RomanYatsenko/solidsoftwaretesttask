@@ -45,14 +45,6 @@ class _MainPageState extends State<MainPage> {
   }
 
   @override
-  void dispose() {
-    // Clean up the controller when the Widget is removed from the Widget tree
-    // This also removes the _printLatestValue listener
-    controller.dispose();
-    super.dispose();
-  }
-
-  @override
   Widget build(BuildContext context) {
     controller.text = middleText;
     return DefaultTabController(
