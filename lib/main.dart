@@ -37,6 +37,10 @@ class _MainPageState extends State<MainPage> {
     }
   }
 
+  _MainPageState() {
+    controller.text = middleText;
+  }
+
   void upDateBgColor() {
     setState(() {
       bgColor = Color((math.Random().nextDouble() * 0xFFFFFF).toInt() << 0)
@@ -46,7 +50,6 @@ class _MainPageState extends State<MainPage> {
 
   @override
   Widget build(BuildContext context) {
-    controller.text = middleText;
     return DefaultTabController(
         length: 3,
         child: Scaffold(
@@ -79,7 +82,9 @@ class _MainPageState extends State<MainPage> {
                         min: 10,
                         max: 50,
                         onChanged: (value) {
-                          setState(() => textSize = value);
+                          setState(() {
+                            textSize = value;
+                          });
                         },
                       )
                     ],
