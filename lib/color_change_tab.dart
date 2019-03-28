@@ -12,14 +12,12 @@ class ColorChangeTab extends StatelessWidget {
     return InkWell(
       onTap: () {
         clickListener();
-        print('Change click');
       },
-      child: Container(
-          child: Center(
-              child: Text(controller.text,
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                      fontSize: textSize, fontWeight: FontWeight.bold)))),
+      child: Center(
+        child: Text(controller.text,
+            textAlign: TextAlign.center,
+            style: TextStyle(fontSize: textSize, fontWeight: FontWeight.bold)),
+      ),
     );
   }
 }
